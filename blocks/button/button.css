@@ -1,0 +1,48 @@
+/* Button Block — BofA style */
+.button {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.button .button__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bofa-red-bright);
+  color: var(--bofa-white);
+  font-family: var(--bofa-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  height: 2.25em;
+  min-width: 230px;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: var(--bofa-btn-radius);
+  transition: all 0.25s ease-out 0.05s;
+}
+
+.button .button__link:hover {
+  background-color: var(--bofa-red);
+  color: var(--bofa-white);
+  text-decoration: none;
+}
+
+.button .button__link:active {
+  background-color: var(--bofa-red-darkest);
+}
+
+/* Secondary (outline) variant */
+.button .button__link--secondary {
+  background-color: transparent;
+  color: var(--bofa-red-bright);
+  border: 1px solid var(--bofa-red-bright);
+}
+
+.button .button__link--secondary:hover {
+  background-color: var(--bofa-red-bright);
+  color: var(--bofa-white);
+}

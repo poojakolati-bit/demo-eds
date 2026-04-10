@@ -1,0 +1,51 @@
+/* Table of Contents Block — BofA style */
+.tableofcontents {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.tableofcontents .tableofcontents__nav {
+  background: var(--bofa-section-gray);
+  border-radius: var(--bofa-card-radius);
+  padding: 1.5rem 2rem;
+}
+
+.tableofcontents .tableofcontents__heading {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-headline-sm);
+  font-weight: 400;
+  color: var(--bofa-dark-text);
+  margin: 0 0 1rem;
+}
+
+.tableofcontents .tableofcontents__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tableofcontents .tableofcontents__item {
+  margin-bottom: 0.5rem;
+}
+
+.tableofcontents .tableofcontents__item--h3 {
+  padding-left: 1.25rem;
+}
+
+.tableofcontents .tableofcontents__item--h4 {
+  padding-left: 2.5rem;
+}
+
+.tableofcontents .tableofcontents__link {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+  color: var(--bofa-link-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.tableofcontents .tableofcontents__link:hover {
+  color: var(--bofa-blue-hover);
+  text-decoration: underline;
+}

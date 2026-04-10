@@ -1,0 +1,255 @@
+/* ==================================================
+   BofA Digital Banking — EDS Global Styles
+   Ported from AEM SCSS design system
+   ================================================== */
+
+/* --- CSS Custom Properties (Design Tokens) --- */
+:root {
+  /* Brand Colors */
+  --bofa-navy: #012169;
+  --bofa-dark-navy: #001543;
+  --bofa-blue-100: #0d1ba7;
+  --bofa-red: #c41230;
+  --bofa-red-bright: #e31837;
+  --bofa-red-dark: #94002b;
+  --bofa-red-darkest: #780032;
+  --bofa-white: #fff;
+  --bofa-light-gray: #f7f4f4;
+  --bofa-section-gray: #f5f5f5;
+  --bofa-section-blue: #f3f6ff;
+  --bofa-dark-text: #000;
+  --bofa-medium-gray: #5c5050;
+  --bofa-shade-gray: #6c6060;
+  --bofa-link-blue: #1d2ecf;
+  --bofa-blue-bright: #2f42ff;
+  --bofa-blue-hover: #0053c2;
+  --bofa-border-gray: rgb(0 0 0 / 24%);
+
+  /* Typography */
+  --bofa-font-family: "Connections", "Helvetica Neue", helvetica, arial, sans-serif;
+  --bofa-font-size: 16px;
+  --bofa-line-height: 1.5;
+
+  /* Heading sizes */
+  --bofa-display-lg: 3.5rem;
+  --bofa-display-md: 3rem;
+  --bofa-display-sm: 2.5rem;
+  --bofa-headline-lg: 2.5rem;
+  --bofa-headline-md: 2rem;
+  --bofa-headline-sm: 1.5rem;
+  --bofa-headline-xsm: 1.125rem;
+  --bofa-body-size: 1rem;
+  --bofa-body-sm: 0.875rem;
+
+  /* Spacing */
+  --bofa-section-padding-y: 3.75rem;
+  --bofa-section-padding-x: 1.375rem;
+  --bofa-container-max: 71.25rem;
+  --bofa-card-gap: 1.375rem;
+
+  /* Border & Shadow */
+  --bofa-card-shadow: 0px 1px 2px 0px rgb(0 0 0 / 8%),
+    0px 4px 4px 0px rgb(0 0 0 / 7%),
+    0px 10px 6px 0px rgb(0 0 0 / 4%);
+  --bofa-card-radius: 0.75rem;
+  --bofa-btn-radius: 2.75rem;
+
+  /* Breakpoints (for reference in JS — CSS uses media queries directly) */
+  --bofa-breakpoint-sm: 640px;
+  --bofa-breakpoint-md: 768px;
+  --bofa-breakpoint-lg: 980px;
+  --bofa-breakpoint-xl: 1068px;
+}
+
+/* --- Font Face --- */
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/styles/fonts/connections_light-web.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/styles/fonts/connections_regular-web.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/styles/fonts/connections_medium-web.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/styles/fonts/connections_bold-web.woff2") format("woff2");
+}
+
+/* --- Reset & Base Styles --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-font-size);
+  line-height: var(--bofa-line-height);
+  color: var(--bofa-dark-text);
+  background: var(--bofa-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: none;
+}
+
+body.appear {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bofa-font-family);
+  color: var(--bofa-dark-text);
+  font-weight: 300;
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+h1 { font-size: var(--bofa-headline-lg); }
+h2 { font-size: var(--bofa-headline-md); }
+h3 { font-size: var(--bofa-headline-sm); }
+h4 { font-size: var(--bofa-headline-xsm); font-weight: 500; }
+
+@media (width >= 1068px) {
+  h1 { font-size: var(--bofa-display-sm); }
+  h2 { font-size: var(--bofa-headline-lg); }
+  h3 { font-size: var(--bofa-headline-md); }
+  h4 { font-size: var(--bofa-headline-sm); }
+}
+
+a {
+  color: var(--bofa-link-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--bofa-blue-hover);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Main & Section --- */
+main {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main .section {
+  padding: 0;
+}
+
+/* --- Default Content (title, text, button as plain HTML) --- */
+main .default-content-wrapper {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+/* --- Button as styled link --- */
+main .section a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bofa-red-bright);
+  color: var(--bofa-white);
+  font-family: var(--bofa-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  height: 2.25em;
+  min-width: 230px;
+  padding: 0 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: var(--bofa-btn-radius);
+  transition: all 0.25s ease-out 0.05s;
+}
+
+main .section a.button:hover {
+  background-color: var(--bofa-red);
+  color: var(--bofa-white);
+  text-decoration: none;
+}
+
+main .section a.button:active {
+  background-color: var(--bofa-red-darkest);
+}
+
+@media (width >= 1068px) {
+  main .section a.button {
+    font-size: 1.125rem;
+  }
+}
+
+/* --- CTA Banner Section --- */
+main .section.cta-banner {
+  background-color: var(--bofa-white);
+  text-align: center;
+  border-top: 6px solid var(--bofa-navy);
+  padding: 0 var(--bofa-section-padding-x) var(--bofa-section-padding-y);
+}
+
+main .section.cta-banner h2 {
+  font-weight: 300;
+  font-size: var(--bofa-headline-md);
+  line-height: 1.2;
+  margin-top: 2.5rem;
+}
+
+@media (width >= 1068px) {
+  main .section.cta-banner h2 {
+    font-size: var(--bofa-headline-lg);
+  }
+}
+
+main .section.cta-banner a.button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 3rem;
+  font-size: 1.125rem;
+  min-width: 280px;
+}
+
+main .section.cta-banner .default-content-wrapper {
+  text-align: center;
+}
+
+main .section.cta-banner .default-content-wrapper p:last-child {
+  margin-top: 1.25rem;
+  font-size: var(--bofa-body-sm);
+}
+
+main .section.cta-banner .default-content-wrapper p:last-child em {
+  font-style: italic;
+}

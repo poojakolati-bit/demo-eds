@@ -1,0 +1,99 @@
+/* Form Block — BofA style */
+.form {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.form .form__inner {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form .form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .form__field--checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form .form__label {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-sm);
+  font-weight: 500;
+  color: var(--bofa-dark-text);
+  margin-bottom: 0.375rem;
+}
+
+.form .form__label--inline {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.form .form__required {
+  color: var(--bofa-red-bright);
+  margin-left: 0.125rem;
+}
+
+.form .form__input,
+.form .form__textarea,
+.form .form__select {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+  color: var(--bofa-dark-text);
+  border: 1px solid var(--bofa-border-gray);
+  border-radius: 0.375rem;
+  padding: 0.625rem 0.75rem;
+  background: var(--bofa-white);
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form .form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form .form__input:focus,
+.form .form__textarea:focus,
+.form .form__select:focus {
+  border-color: var(--bofa-link-blue);
+}
+
+.form .form__checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--bofa-red-bright);
+}
+
+.form .form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bofa-red-bright);
+  color: var(--bofa-white);
+  font-family: var(--bofa-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  height: 2.25em;
+  min-width: 230px;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: var(--bofa-btn-radius);
+  cursor: pointer;
+  transition: all 0.25s ease-out 0.05s;
+}
+
+.form .form__submit:hover {
+  background-color: var(--bofa-red);
+}
+
+.form .form__submit:active {
+  background-color: var(--bofa-red-darkest);
+}

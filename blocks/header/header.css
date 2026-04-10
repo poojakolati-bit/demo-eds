@@ -1,0 +1,203 @@
+/* Header Block — BofA exact match */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bofa-white);
+}
+
+.bofa-header__utility {
+  background-color: #f2f2f2;
+  color: var(--bofa-dark-text);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.bofa-header__utility-inner {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0.625rem var(--bofa-section-padding-x);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bofa-header__utility-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.bofa-header__utility-links a {
+  color: var(--bofa-link-blue);
+  text-decoration: underline;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.bofa-header__utility-links a:hover {
+  color: var(--bofa-blue-hover);
+}
+
+.bofa-header__main {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.bofa-header__main-inner {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0.75rem var(--bofa-section-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bofa-header__logo {
+  flex-shrink: 0;
+}
+
+.bofa-header__logo img {
+  display: block;
+  height: 2rem;
+  width: auto;
+}
+
+.bofa-header__subnav {
+  height: 40px;
+}
+
+.bofa-header__subnav-inner {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+  height: 100%;
+}
+
+.bofa-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  overflow-x: auto;
+  height: 100%;
+}
+
+@media (width <= 768px) {
+  .bofa-header__nav {
+    display: none;
+  }
+}
+
+.bofa-header__nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.bofa-header__nav-item:first-child .bofa-header__nav-link {
+  padding-left: 0;
+}
+
+.bofa-header__nav-item:hover .bofa-header__dropdown {
+  display: block;
+}
+
+.bofa-header__nav-item:hover .bofa-header__nav-link::after {
+  transform: rotate(-135deg);
+  margin-top: 3px;
+}
+
+.bofa-header__nav-item:hover .bofa-header__nav-link {
+  border-bottom-color: var(--bofa-red-bright);
+}
+
+.bofa-header__nav-item--active .bofa-header__nav-link {
+  color: #000;
+  font-weight: 500;
+}
+
+.bofa-header__nav-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.25rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none !important;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.bofa-header__nav-link::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 6px;
+  border-right: 1.5px solid var(--bofa-red-bright);
+  border-bottom: 1.5px solid var(--bofa-red-bright);
+  transform: rotate(45deg);
+  margin-top: -3px;
+  transition: transform 0.2s ease;
+}
+
+.bofa-header__nav-item--no-dropdown .bofa-header__nav-link::after {
+  display: none;
+}
+
+.bofa-header__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bofa-white);
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  border-top: 3px solid var(--bofa-navy);
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+
+.bofa-header__dropdown-link {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  font-size: 14px;
+  color: var(--bofa-navy);
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.bofa-header__dropdown-link:hover {
+  background-color: #f5f5f5;
+  color: var(--bofa-navy);
+  text-decoration: none !important;
+}
+
+.bofa-header__cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bofa-red-bright);
+  color: var(--bofa-white);
+  padding: 0.4375rem 1rem;
+  border-radius: var(--bofa-btn-radius);
+  font-size: var(--bofa-body-sm);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease-out 0.05s;
+}
+
+.bofa-header__cta:hover {
+  background-color: var(--bofa-red);
+  text-decoration: none;
+  color: var(--bofa-white);
+}
+
+.bofa-header__cta:active {
+  background-color: var(--bofa-red-darkest);
+}

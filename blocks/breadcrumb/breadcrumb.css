@@ -1,0 +1,48 @@
+/* Breadcrumb Block — BofA style */
+.breadcrumb {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 1rem var(--bofa-section-padding-x);
+}
+
+.breadcrumb .breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-sm);
+}
+
+.breadcrumb .breadcrumb__item {
+  display: flex;
+  align-items: center;
+  color: var(--bofa-shade-gray);
+}
+
+.breadcrumb .breadcrumb__item::after {
+  content: '/';
+  margin: 0 0.5rem;
+  color: var(--bofa-border-gray);
+}
+
+.breadcrumb .breadcrumb__item:last-child::after {
+  display: none;
+}
+
+.breadcrumb .breadcrumb__item--active {
+  color: var(--bofa-dark-text);
+  font-weight: 500;
+}
+
+.breadcrumb .breadcrumb__link {
+  color: var(--bofa-link-blue);
+  text-decoration: none;
+}
+
+.breadcrumb .breadcrumb__link:hover {
+  color: var(--bofa-blue-hover);
+  text-decoration: underline;
+}

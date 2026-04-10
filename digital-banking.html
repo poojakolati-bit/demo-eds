@@ -1,0 +1,298 @@
+<html>
+<head>
+  <title>Digital Banking</title>
+  <link rel="canonical" href="https://localhost:3001/digital-banking">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="urn:adobe:aue:config:service" content="https://localhost:8000">
+  <meta name="urn:adobe:aue:system:aemconnection" content="aem:https://localhost:8443">
+  <script src="https://universal-editor-service.adobe.io/cors.js" async></script>
+  <script type="application/vnd.adobe.aue.model+json">
+  [
+    {
+      "id": "hero-banner",
+      "fields": [
+        { "component": "text", "name": "heading", "label": "Heading", "valueType": "string" },
+        { "component": "richtext", "name": "subtitle", "label": "Subtitle", "valueType": "string" },
+        { "component": "text", "name": "ctaLabel", "label": "CTA Button Text", "valueType": "string" },
+        { "component": "text", "name": "ctaLink", "label": "CTA Link", "valueType": "string" },
+        { "component": "text", "name": "backgroundImage", "label": "Background Image Path", "valueType": "string" },
+        { "component": "text", "name": "prefixText", "label": "CTA Prefix Text", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "feature-card",
+      "fields": [
+        { "component": "text", "name": "cardTitle", "label": "Title", "valueType": "string" },
+        { "component": "richtext", "name": "cardDescription", "label": "Description", "valueType": "string" },
+        { "component": "text", "name": "cardImage", "label": "Card Image Path", "valueType": "string" },
+        { "component": "text", "name": "cardImageAlt", "label": "Card Image Alt Text", "valueType": "string" },
+        { "component": "text", "name": "cardLinkText", "label": "Link Text", "valueType": "string" },
+        { "component": "text", "name": "cardLink", "label": "Link URL", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "columns-item",
+      "fields": [
+        { "component": "text", "name": "columnTitle", "label": "Title", "valueType": "string" },
+        { "component": "richtext", "name": "columnContent", "label": "Content", "valueType": "string" },
+        { "component": "text", "name": "columnImage", "label": "Image Path", "valueType": "string" },
+        { "component": "text", "name": "columnImageAlt", "label": "Image Alt Text", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "accordion-item",
+      "fields": [
+        { "component": "text", "name": "accordionTitle", "label": "Question", "valueType": "string" },
+        { "component": "richtext", "name": "accordionContent", "label": "Answer", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "app-download",
+      "fields": [
+        { "component": "text", "name": "heading", "label": "Heading", "valueType": "string" },
+        { "component": "text", "name": "ctaLabel", "label": "CTA Button Text", "valueType": "string" },
+        { "component": "text", "name": "ctaLink", "label": "CTA Link", "valueType": "string" },
+        { "component": "text", "name": "qrcImage", "label": "QRC Image Path", "valueType": "string" },
+        { "component": "richtext", "name": "termsText", "label": "Terms Text", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "site-header",
+      "fields": [
+        { "component": "text", "name": "logoImage", "label": "Logo Image Path", "valueType": "string" },
+        { "component": "text", "name": "logoAlt", "label": "Logo Alt Text", "valueType": "string" },
+        { "component": "text", "name": "ctaText", "label": "CTA Button Text", "valueType": "string" },
+        { "component": "text", "name": "ctaLink", "label": "CTA Link", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "section",
+      "fields": [
+        { "component": "text", "name": "style", "label": "Style", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "page",
+      "fields": [
+        { "component": "text", "name": "title", "label": "Page Title", "valueType": "string" }
+      ]
+    }
+  ]
+  </script>
+  <script type="application/vnd.adobe.aue.filter+json">
+  [
+    {
+      "id": "section",
+      "components": [
+        { "title": "Hero Banner", "id": "hero-banner", "plugins": { "aem": { "page": { "resourceType": "demo/components/hero-banner", "template": {} } } } },
+        { "title": "Feature Cards", "id": "feature-card", "plugins": { "aem": { "page": { "resourceType": "demo/components/cards", "template": {} } } } },
+        { "title": "Columns", "id": "columns-item", "plugins": { "aem": { "page": { "resourceType": "demo/components/columns", "template": {} } } } },
+        { "title": "Accordion", "id": "accordion-item", "plugins": { "aem": { "page": { "resourceType": "demo/components/accordion", "template": {} } } } },
+        { "title": "App Download", "id": "app-download", "plugins": { "aem": { "page": { "resourceType": "demo/components/app-download", "template": {} } } } }
+      ]
+    }
+  ]
+  </script>
+  <script src="/scripts/scripts.js" type="module"></script>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header data-aue-resource="urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/header" data-aue-type="container" data-aue-model="site-header" data-aue-label="Header"></header>
+  <main data-aue-resource="urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content" data-aue-type="container" data-aue-filter="section" data-aue-model="page" data-aue-label="Main Content">
+    <div>
+      <div class="hero">
+        <div>
+          <div>Heading</div>
+          <div>Mobile and Online Banking</div>
+        </div>
+        <div>
+          <div>Subtitle</div>
+          <div><p>Secure access to your accounts to help you stay in control of your financial life, 24/7.</p></div>
+        </div>
+        <div>
+          <div>CTA Label</div>
+          <div>Get Started</div>
+        </div>
+        <div>
+          <div>Prefix Text</div>
+          <div>Mobile and Online Banking</div>
+        </div>
+        <div>
+          <div>Background Image</div>
+          <div><img src="/media/hero-bg.jpg" alt="Hero background"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="cards">
+        <div>
+          <div><img src="/media/mobile_150x100.jpg" alt="Mobile Banking"></div>
+          <div>Mobile Banking</div>
+          <div><p>Manage and monitor your accounts from almost anywhere.</p><p><a href="#">FAQs</a></p><p><a href="#">Get the app</a></p></div>
+          <div>Learn more</div>
+        </div>
+        <div>
+          <div><img src="/media/olb_150x100.jpg" alt="Online Banking"></div>
+          <div>Online Banking</div>
+          <div><p>Convenient tools and features that help put you in control of your finances from your computer.</p><p><a href="#">FAQs</a></p></div>
+          <div>Enroll/Log-in</div>
+        </div>
+        <div>
+          <div><img src="/media/ATM_150x100.jpg" alt="ATM and Financial Centers"></div>
+          <div>ATM or meet with a specialist</div>
+          <div><p>Find an ATM, open an account online or schedule an appointment.</p><p><a href="#">Open an account</a></p><p><a href="#">Schedule an appointment</a></p></div>
+          <div>Learn more</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="columns">
+        <div>
+          <div><img src="/media/erica-card-bg.gif" alt="Erica virtual assistant"></div>
+          <div>
+            <h2>Ask Erica. Get answers.</h2>
+            <p>Erica, your virtual financial assistant, is here to help with:</p>
+            <ul>
+              <li>Your servicing needs</li>
+              <li>Providing answers to your financial questions</li>
+              <li>Connecting you to financial specialists when you need it</li>
+              <li>And much more</li>
+            </ul>
+            <p><a href="#">See what Erica can do</a></p>
+          </div>
+        </div>
+        <div>
+          <div><img src="/media/deposit-money.jpg" alt="Deposit money"></div>
+          <div>
+            <h2>Deposit money</h2>
+            <p>Take advantage of convenient ways to deposit your money:</p>
+            <ul>
+              <li><strong>Mobile Check Deposit</strong> — Deposit checks from almost anywhere with the Mobile Banking app.</li>
+              <li><strong>Direct Deposit</strong> — Set up direct deposit to have your money automatically sent to your account.</li>
+              <li><strong>ATM</strong> — Conveniently deposit cash and checks at select ATMs.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div><img src="/media/erica-photo.jpg" alt="Pay and transfer"></div>
+          <div>
+            <h2>Pay and transfer</h2>
+            <p>Convenient ways to move money and make payments:</p>
+            <ul>
+              <li><strong>Send Money</strong> — Send and receive money with friends and family in minutes.</li>
+              <li><strong>Pay Bills</strong> — Easily manage and pay your bills. Get reminders when bills are due.</li>
+              <li><strong>Transfer Money</strong> — Move money from one account to another with just a few taps.</li>
+              <li><strong>Wires</strong> — Send domestic and international wires with competitive exchange rates.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div><img src="/media/account-mgmt.jpg" alt="Account management"></div>
+          <div>
+            <h2>Account management</h2>
+            <p>Monitor account activity, see your statements, enable security features and more:</p>
+            <ul>
+              <li><strong>Alerts</strong> — Turn on alerts to help you stay connected to your account.</li>
+              <li><strong>Paperless</strong> — Go paperless to reduce the risk of lost, delayed or stolen mail.</li>
+              <li><strong>Security</strong> — Check your account security level and enable more security features.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div><img src="/media/card-mgmt.jpg" alt="Card management"></div>
+          <div>
+            <h2>Card management</h2>
+            <p>Easy access to help you manage your debit and credit card and more:</p>
+            <ul>
+              <li><strong>Debit Card</strong> — Explore ways to use your debit card. Fast, easy and secure.</li>
+              <li><strong>Credit Card</strong> — Access frequently used credit card features and services.</li>
+              <li><strong>Digital Wallets</strong> — Check out the convenience of digital wallet payments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Resource Center</h2>
+      <p>Make the most of digital banking with resources that can help with everyday questions.</p>
+      <div class="cards resource-center">
+        <div>
+          <div><img src="/media/security-center-mobile_475x340.jpg" alt="Security Center"></div>
+          <div>Security Center</div>
+          <div><p>Learn red flags of trending scams and how you can help to prevent fraud and identity theft.</p></div>
+          <div>Learn more</div>
+        </div>
+        <div>
+          <div><img src="/media/financial-wellness_475x340.jpg" alt="Financial Wellness Tools"></div>
+          <div>Financial Wellness Tools</div>
+          <div><p>Build your financial foundation with personalized support, easy to use digital tools and solutions.</p></div>
+          <div>Get started</div>
+        </div>
+        <div>
+          <div><img src="/media/how-to-laptop_475x340.jpg" alt="How-to Guide for Digital Banking"></div>
+          <div>How-to Guide for Digital Banking</div>
+          <div><p>Explore digital features on your time, and at your pace.</p></div>
+          <div>Explore now</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion">
+        <div>
+          <div>What is Digital Banking?</div>
+          <div><p>Digital Banking gives you secure access to your accounts through our website and mobile app. You can manage your finances, pay bills, transfer money, deposit checks, and more — anytime, anywhere.</p></div>
+        </div>
+        <div>
+          <div>How do I enroll in Digital Banking?</div>
+          <div><p>You can enroll by visiting our website and clicking 'Enroll' or by downloading our Mobile Banking app and following the setup instructions. You will need your account number and personal information to complete the enrollment.</p></div>
+        </div>
+        <div>
+          <div>What security measures are in place?</div>
+          <div><p>We use multiple layers of security including encryption, multi-factor authentication, automatic session timeouts, and real-time fraud monitoring to keep your accounts safe.</p></div>
+        </div>
+        <div>
+          <div>What is the cost for Digital Banking?</div>
+          <div><p>Digital Banking is free to use. There is no charge for enrolling in or using Online and Mobile Banking. Standard message and data rates from your wireless carrier may apply.</p></div>
+        </div>
+        <div>
+          <div>What are the benefits of Digital Banking?</div>
+          <div><p>Digital Banking lets you bank on your schedule — 24/7 access to your accounts, instant alerts, paperless statements, easy bill pay, quick money transfers, mobile check deposit, and financial planning tools.</p></div>
+        </div>
+        <div>
+          <div>How do I reset my password?</div>
+          <div><p>To reset your password, go to the sign-in page and select 'Forgot Password'. You will be asked to verify your identity, then you can create a new password.</p></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="app-download">
+        <div>
+          <div>Heading</div>
+          <div>Bank simply and conveniently on your own schedule</div>
+        </div>
+        <div>
+          <div>CTA Label</div>
+          <div>Get the app</div>
+        </div>
+        <div>
+          <div>QR Image</div>
+          <div><img src="/media/qrc-widget.jpg" alt="QR Code"></div>
+        </div>
+        <div>
+          <div>Terms</div>
+          <div><p><em>Available for eligible Bank of America accounts. Standard message and data rates may apply from your wireless carrier.</em></p></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Bank simply and conveniently on your own schedule</h2>
+      <p><a href="#">Get the App</a></p>
+      <p><em>Available for eligible Bank of America accounts. Standard message and data rates may apply from your wireless carrier.</em></p>
+      <div class="section-metadata">
+        <div><div>style</div><div>cta-banner</div></div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

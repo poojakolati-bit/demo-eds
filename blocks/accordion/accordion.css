@@ -1,0 +1,98 @@
+/* Accordion Block — BofA FAQ exact match */
+.accordion {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--bofa-shade-gray);
+}
+
+.accordion__item:last-child {
+  border-bottom: none;
+}
+
+.accordion__header {
+  margin: 0;
+}
+
+.accordion__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--bofa-font-family);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--bofa-dark-text);
+  text-align: left;
+  line-height: 1.25;
+  transition: color 0.2s ease;
+}
+
+@media (width >= 1068px) {
+  .accordion__button {
+    font-size: 1.5rem;
+  }
+}
+
+.accordion__button:hover,
+.accordion__button:focus {
+  color: var(--bofa-blue-hover);
+}
+
+.accordion__button:focus-visible {
+  outline: 2px solid var(--bofa-link-blue);
+}
+
+.accordion__button::after {
+  content: "\25B8";
+  font-family: var(--bofa-font-family);
+  font-size: 1.25rem;
+  font-weight: 100;
+  color: var(--bofa-dark-text);
+  flex-shrink: 0;
+  margin-left: 1rem;
+  line-height: 1.25;
+  position: relative;
+  transition: all 0.28s cubic-bezier(0.02, 0.01, 0.47, 1) 0.05s;
+  transform: rotate(90deg);
+}
+
+@media (width >= 1068px) {
+  .accordion__button::after {
+    font-size: 1.5rem;
+  }
+}
+
+.accordion__button--expanded::after {
+  transform: rotate(-90deg);
+}
+
+.accordion__panel {
+  padding: 0 0 1.25rem;
+  font-size: var(--bofa-body-size);
+  color: var(--bofa-dark-text);
+  line-height: 1.5;
+}
+
+.accordion__panel p {
+  margin-bottom: 0.75rem;
+}
+
+.accordion__panel--hidden {
+  display: none;
+}
+
+.accordion__title {
+  /* inherits button styles */
+}
+
+.accordion__icon {
+  display: none; /* using ::after on button instead */
+}

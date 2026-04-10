@@ -1,0 +1,25 @@
+/* Image Block — BofA style */
+.image {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.image .image__figure {
+  margin: 0;
+}
+
+.image .image__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--bofa-card-radius);
+}
+
+.image .image__caption {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-sm);
+  color: var(--bofa-shade-gray);
+  margin-top: 0.5rem;
+  text-align: center;
+}

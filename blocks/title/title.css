@@ -1,0 +1,30 @@
+/* Title Block — BofA style */
+.title {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.title .title__text {
+  font-family: var(--bofa-font-family);
+  font-weight: 300;
+  color: var(--bofa-dark-text);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.title h1.title__text { font-size: var(--bofa-headline-lg); }
+.title h2.title__text { font-size: var(--bofa-headline-md); }
+.title h3.title__text { font-size: var(--bofa-headline-sm); }
+
+.title h4.title__text {
+  font-size: var(--bofa-headline-xsm);
+  font-weight: 500;
+}
+
+@media (width >= 1068px) {
+  .title h1.title__text { font-size: var(--bofa-display-sm); }
+  .title h2.title__text { font-size: var(--bofa-headline-lg); }
+  .title h3.title__text { font-size: var(--bofa-headline-md); }
+  .title h4.title__text { font-size: var(--bofa-headline-sm); }
+}

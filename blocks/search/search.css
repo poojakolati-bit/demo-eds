@@ -1,0 +1,57 @@
+/* Search Block — BofA style */
+.search {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.search .search__input-wrapper {
+  display: flex;
+  max-width: 600px;
+  border: 1px solid var(--bofa-border-gray);
+  border-radius: var(--bofa-btn-radius);
+  overflow: hidden;
+  background: var(--bofa-white);
+  transition: border-color 0.2s;
+}
+
+.search .search__input-wrapper:focus-within {
+  border-color: var(--bofa-link-blue);
+}
+
+.search .search__input {
+  flex: 1;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+  color: var(--bofa-dark-text);
+  outline: none;
+  background: transparent;
+}
+
+.search .search__input::placeholder {
+  color: var(--bofa-shade-gray);
+}
+
+.search .search__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bofa-red-bright);
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: var(--bofa-white);
+  transition: background 0.2s;
+}
+
+.search .search__button:hover {
+  background: var(--bofa-red);
+}
+
+.search .search__results {
+  margin-top: 1rem;
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+}
