@@ -2,7 +2,7 @@ export default function decorate(block) {
   const rows = [...block.querySelectorAll(':scope > div')];
 
   // UE container attributes for the columns block
-  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/columns';
+  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container';
   block.dataset.aueType = 'container';
   block.dataset.aueModel = 'columns-item';
   block.dataset.aueLabel = 'Columns';
@@ -13,7 +13,8 @@ export default function decorate(block) {
     if (cells.length < 2) return;
 
     // UE attributes for each column row
-    row.dataset.aueResource = `urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/columns/item_${index}`;
+    const teaserNames = ['teaser_assistant', 'teaser_deposit', 'teaser_pay', 'teaser_account', 'teaser_cards'];
+    row.dataset.aueResource = `urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container/${teaserNames[index] || `teaser_${index}`}`;
     row.dataset.aueType = 'component';
     row.dataset.aueModel = 'columns-item';
     row.dataset.aueLabel = `Column ${index + 1}`;
@@ -22,11 +23,9 @@ export default function decorate(block) {
     let imageCell;
     let contentCell;
     if (cells[0].querySelector('img') || cells[0].querySelector('picture')) {
-      imageCell = cells[0];
-      contentCell = cells[1];
+      [imageCell, contentCell] = cells;
     } else {
-      imageCell = cells[1];
-      contentCell = cells[0];
+      [contentCell, imageCell] = cells;
     }
 
     // Build image side

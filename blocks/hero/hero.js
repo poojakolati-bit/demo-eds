@@ -23,7 +23,7 @@ export default function decorate(block) {
 
   // UE resource path
   const resource = block.closest('[data-aue-resource]')?.dataset.aueResource
-    || 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/hero';
+    || 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container/hero_banner';
 
   block.dataset.aueResource = resource;
   block.dataset.aueType = 'component';

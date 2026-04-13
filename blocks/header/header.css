@@ -98,6 +98,7 @@
   padding-left: 0;
 }
 
+/* stylelint-disable no-descending-specificity */
 .bofa-header__nav-item:hover .bofa-header__dropdown {
   display: block;
 }
@@ -160,6 +161,7 @@
   z-index: 100;
   padding: 0.5rem 0;
 }
+/* stylelint-enable no-descending-specificity */
 
 .bofa-header__dropdown-link {
   display: block;

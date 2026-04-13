@@ -3,7 +3,7 @@ export default function decorate(block) {
   const isResourceCenter = block.classList.contains('resource-center');
 
   // UE container attributes for the cards block
-  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/cards';
+  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container';
   block.dataset.aueType = 'container';
   block.dataset.aueModel = 'feature-card';
   block.dataset.aueLabel = isResourceCenter ? 'Resource Center Cards' : 'Feature Cards';
@@ -19,7 +19,8 @@ export default function decorate(block) {
     const imgSrc = imgEl?.src || '';
     const imgAlt = imgEl?.alt || title;
 
-    const itemResource = `urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/cards/item_${index}`;
+    const cardNames = ['card_mobile', 'card_online', 'card_atm'];
+    const itemResource = `urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container/${cardNames[index] || `card_${index}`}`;
 
     if (isResourceCenter) {
       return `

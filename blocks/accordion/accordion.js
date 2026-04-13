@@ -2,7 +2,7 @@ export default function decorate(block) {
   const rows = [...block.querySelectorAll(':scope > div')];
 
   // UE container attributes for the accordion block
-  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/accordion';
+  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container/accordion_faq';
   block.dataset.aueType = 'container';
   block.dataset.aueModel = 'accordion-item';
   block.dataset.aueLabel = 'Accordion';
@@ -12,7 +12,7 @@ export default function decorate(block) {
     const title = cells[0]?.textContent?.trim() || `Item ${index + 1}`;
     const content = cells[1]?.innerHTML || '';
     const id = `accordion-${index}`;
-    const itemResource = `urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/accordion/item_${index}`;
+    const itemResource = `urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container/accordion_faq/item_${index + 1}`;
 
     return `
       <div class="accordion__item"

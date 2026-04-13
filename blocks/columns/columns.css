@@ -41,6 +41,7 @@
   background-color: var(--bofa-section-gray);
 }
 
+/* stylelint-disable no-descending-specificity */
 .columns__image {
   flex: 0 0 50%;
   max-width: 50%;
@@ -102,6 +103,7 @@
     border-radius: 0 0 0.75rem 0.75rem;
   }
 }
+/* stylelint-enable no-descending-specificity */
 
 .columns__content h2 {
   font-family: var(--bofa-font-family);

@@ -87,8 +87,29 @@
   text-decoration: underline;
 }
 
-.cards__card-description a:hover {
+/* Override global button styles inside card descriptions */
+.cards__card-description .button-container {
+  text-align: center;
+}
+
+main .section .cards__card-description a.button {
+  background: none;
+  color: var(--bofa-link-blue);
+  font-size: var(--bofa-body-size);
+  font-weight: 400;
+  text-decoration: underline;
+  padding: 0;
+  min-width: 0;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  display: inline;
+}
+
+main .section .cards__card-description a.button:hover {
+  background: none;
   color: var(--bofa-blue-hover);
+  text-decoration: underline;
 }
 
 .cards__card-link {

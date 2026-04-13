@@ -1,20 +1,3 @@
-export default async function decorate(block) {
-  const resp = await fetch('/nav.html');
-  if (!resp.ok) {
-    // Fallback: build header inline
-    block.innerHTML = '';
-    buildDefaultHeader(block);
-    return;
-  }
-
-  const html = await resp.text();
-  const nav = document.createElement('nav');
-  nav.innerHTML = html;
-  block.innerHTML = '';
-  block.append(nav);
-  decorateHeader(block);
-}
-
 function buildDefaultHeader(block) {
   // UE attributes on the header block
   block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/header';
@@ -138,4 +121,21 @@ function decorateHeader(block) {
   wrapper.append(utility, main);
   block.innerHTML = '';
   block.append(wrapper);
+}
+
+export default async function decorate(block) {
+  const resp = await fetch('/nav.html');
+  if (!resp.ok) {
+    // Fallback: build header inline
+    block.innerHTML = '';
+    buildDefaultHeader(block);
+    return;
+  }
+
+  const html = await resp.text();
+  const nav = document.createElement('nav');
+  nav.innerHTML = html;
+  block.innerHTML = '';
+  block.append(nav);
+  decorateHeader(block);
 }

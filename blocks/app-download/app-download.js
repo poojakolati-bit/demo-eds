@@ -18,7 +18,7 @@ export default function decorate(block) {
   const termsText = config.terms?.innerHTML || '';
 
   // UE component attributes
-  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/app-download';
+  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/root/container/container/dropzone';
   block.dataset.aueType = 'component';
   block.dataset.aueModel = 'app-download';
   block.dataset.aueLabel = 'App Download';

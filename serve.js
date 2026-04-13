@@ -1,7 +1,6 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 const PORT = 3001;
 const ROOT = __dirname;
@@ -64,9 +63,10 @@ const server = https.createServer(
       res.writeHead(200);
       res.end(data);
     });
-  }
+  },
 );
 
 server.listen(PORT, () => {
+  // eslint-disable-next-line no-console
   console.log(`HTTPS server with CORS running at https://localhost:${PORT}`);
 });

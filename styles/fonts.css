@@ -1,0 +1,32 @@
+/* Font definitions */
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/styles/fonts/connections_light-web.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/styles/fonts/connections_regular-web.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/styles/fonts/connections_medium-web.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Connections;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/styles/fonts/connections_bold-web.woff2") format("woff2");
+}
