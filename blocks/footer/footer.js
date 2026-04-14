@@ -1,20 +1,12 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
-
-/**
- * loads and decorates the footer
- * @param {Element} block The footer block element
- */
 export default async function decorate(block) {
-  // load footer as fragment
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  const fragment = await loadFragment(footerPath);
+  // UE attributes on the footer block
+  block.dataset.aueResource = 'urn:aemconnection:/content/demo/us/en/digital-banking/jcr:content/footer';
+  block.dataset.aueType = 'component';
+  block.dataset.aueLabel = 'Footer';
 
-  // decorate footer DOM
-  block.textContent = '';
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
-  block.append(footer);
+  block.innerHTML = `
+    <div class="footer__inner">
+      <p>&copy; ${new Date().getFullYear()} Bank of America Corporation. All rights reserved.</p>
+    </div>
+  `;
 }

@@ -1,0 +1,61 @@
+/* Tabs Block — BofA style */
+.tabs {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.tabs .tabs__list {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--bofa-border-gray);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabs .tabs__tab {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+  font-weight: 400;
+  color: var(--bofa-shade-gray);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tabs .tabs__tab:hover {
+  color: var(--bofa-dark-text);
+}
+
+.tabs .tabs__tab--active {
+  color: var(--bofa-red-bright);
+  border-bottom-color: var(--bofa-red-bright);
+  font-weight: 500;
+}
+
+.tabs .tabs__panels {
+  padding: 2rem 0;
+}
+
+.tabs .tabs__panel {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+  color: var(--bofa-dark-text);
+  line-height: 1.5;
+}
+
+.tabs .tabs__panel p {
+  margin-bottom: 1rem;
+}
+
+.tabs .tabs__panel a {
+  color: var(--bofa-link-blue);
+}
+
+.tabs .tabs__panel a:hover {
+  color: var(--bofa-blue-hover);
+}

@@ -1,0 +1,159 @@
+/* App Download Block — BofA "Get the app" section */
+.app-download {
+  width: 100%;
+}
+
+.app-download__bar {
+  height: 50px;
+  background-color: var(--bofa-navy);
+  width: 100%;
+}
+
+.app-download__wrapper {
+  display: flex;
+  align-items: center;
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 3rem var(--bofa-section-padding-x);
+  gap: 3rem;
+}
+
+@media (width <= 768px) {
+  .app-download__wrapper {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.app-download__left {
+  flex: 1;
+  text-align: center;
+}
+
+@media (width >= 768px) {
+  .app-download__left {
+    text-align: left;
+    padding-right: 2rem;
+  }
+}
+
+.app-download__title {
+  font-family: var(--bofa-font-family);
+  font-weight: 100;
+  font-size: var(--bofa-headline-md);
+  color: var(--bofa-dark-text);
+  line-height: 1.2;
+  margin-bottom: 1.75rem;
+}
+
+@media (width >= 1068px) {
+  .app-download__title {
+    font-size: var(--bofa-headline-lg);
+  }
+}
+
+.app-download__select {
+  position: relative;
+  margin-bottom: 1.25rem;
+  max-width: 400px;
+}
+
+.app-download__select select {
+  width: 100%;
+  padding: 5px 48px 5px 8px;
+  font-family: var(--bofa-font-family);
+  font-size: 20px;
+  color: #646464;
+  border: 1px solid var(--bofa-shade-gray);
+  border-radius: 0;
+  background: var(--bofa-white);
+  appearance: none;
+  cursor: pointer;
+}
+
+.app-download__select select:focus {
+  outline: 2px solid var(--bofa-link-blue);
+  outline-offset: -2px;
+}
+
+.app-download__select-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bofa-navy);
+  color: var(--bofa-white);
+  pointer-events: none;
+}
+
+.app-download__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bofa-red-bright);
+  color: var(--bofa-white);
+  font-family: var(--bofa-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0 16px;
+  height: 48px;
+  border-radius: var(--bofa-btn-radius);
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 416px;
+  transition: background-color 0.25s ease;
+}
+
+.app-download__cta:hover {
+  background-color: var(--bofa-red);
+  color: var(--bofa-white);
+}
+
+.app-download__cta:active {
+  background-color: var(--bofa-red-darkest);
+}
+
+.app-download__terms {
+  margin-top: 1.25rem;
+  font-size: 18px;
+  color: #000;
+  max-width: 416px;
+  background: transparent;
+  text-align: center;
+}
+
+.app-download__terms em,
+.app-download__terms i {
+  font-style: italic;
+}
+
+.app-download__terms a {
+  color: var(--bofa-link-blue);
+  text-decoration: underline;
+}
+
+.app-download__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width <= 768px) {
+  .app-download__right {
+    width: 100%;
+  }
+}
+
+.app-download__qrc-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+}

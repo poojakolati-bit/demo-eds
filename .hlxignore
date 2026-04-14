@@ -1,7 +1,6 @@
 .*
-*.md
-karma.config.js
-LICENSE
+node_modules
 package.json
 package-lock.json
-test/*
+serve.js
+AGENTS.md

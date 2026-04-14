@@ -1,0 +1,12 @@
+/* Separator Block — BofA style */
+.separator {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 1rem var(--bofa-section-padding-x);
+}
+
+.separator .separator__rule {
+  border: none;
+  border-top: 1px solid var(--bofa-border-gray);
+  margin: 0;
+}

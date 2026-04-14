@@ -1,0 +1,34 @@
+/* PDF Viewer Block — BofA style */
+.pdfviewer {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.pdfviewer .pdfviewer__wrapper {
+  border: 1px solid var(--bofa-border-gray);
+  border-radius: var(--bofa-card-radius);
+  overflow: hidden;
+  background: var(--bofa-section-gray);
+}
+
+.pdfviewer .pdfviewer__frame {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+}
+
+@media (width <= 768px) {
+  .pdfviewer .pdfviewer__frame {
+    height: 400px;
+  }
+}
+
+.pdfviewer .pdfviewer__empty {
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+  color: var(--bofa-shade-gray);
+  text-align: center;
+  padding: 2rem;
+}

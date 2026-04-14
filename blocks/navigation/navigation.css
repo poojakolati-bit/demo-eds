@@ -1,0 +1,74 @@
+/* Navigation Block — BofA style */
+.navigation {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.navigation .navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.navigation .navigation__item {
+  position: relative;
+}
+
+.navigation .navigation__link {
+  display: block;
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-size);
+  font-weight: 400;
+  color: var(--bofa-dark-text);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  transition: color 0.2s;
+}
+
+.navigation .navigation__link:hover {
+  color: var(--bofa-red-bright);
+}
+
+/* Sub-navigation */
+.navigation .navigation__sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  background: var(--bofa-white);
+  border: 1px solid var(--bofa-border-gray);
+  border-radius: var(--bofa-card-radius);
+  box-shadow: var(--bofa-card-shadow);
+  min-width: 200px;
+  z-index: 10;
+}
+
+.navigation .navigation__item--has-children:hover .navigation__sub {
+  display: block;
+}
+
+.navigation .navigation__sub-item {
+  margin: 0;
+}
+
+.navigation .navigation__sub-link {
+  display: block;
+  font-family: var(--bofa-font-family);
+  font-size: var(--bofa-body-sm);
+  color: var(--bofa-dark-text);
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  transition: background 0.15s;
+}
+
+.navigation .navigation__sub-link:hover {
+  background: var(--bofa-section-gray);
+  color: var(--bofa-red-bright);
+}
