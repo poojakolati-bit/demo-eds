@@ -43,7 +43,7 @@ const server = https.createServer(
     let urlPath = decodeURIComponent(req.url.split('?')[0]);
     if (urlPath === '/') urlPath = '/index.html';
 
-    const filePath = path.join(ROOT, urlPath);
+    let filePath = path.join(ROOT, urlPath);
 
     // Prevent path traversal
     if (!filePath.startsWith(ROOT)) {
@@ -52,10 +52,30 @@ const server = https.createServer(
       return;
     }
 
+    // If no file extension, try appending .html
+    const tryWithoutExtension = () => {
+      const htmlPath = `${filePath}.html`;
+      fs.readFile(htmlPath, (htmlErr, data) => {
+        if (!htmlErr) {
+          res.setHeader('Content-Type', MIME['.html'] || 'application/octet-stream');
+          res.writeHead(200);
+          res.end(data);
+        } else {
+          res.writeHead(404);
+          res.end('Not found');
+        }
+      });
+    };
+
     fs.readFile(filePath, (err, data) => {
       if (err) {
-        res.writeHead(404);
-        res.end('Not found');
+        // If file not found and no extension, try with .html
+        if (!path.extname(filePath)) {
+          tryWithoutExtension();
+        } else {
+          res.writeHead(404);
+          res.end('Not found');
+        }
         return;
       }
       const ext = path.extname(filePath).toLowerCase();
