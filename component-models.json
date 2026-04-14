@@ -1,0 +1,72 @@
+[
+  {
+    "id": "hero",
+    "fields": [
+      { "component": "text", "name": "Heading", "label": "Heading" },
+      { "component": "richtext", "name": "Subtitle", "label": "Subtitle" },
+      { "component": "text", "name": "CTA Label", "label": "CTA Button Text" },
+      { "component": "text", "name": "Prefix Text", "label": "CTA Prefix Text" },
+      { "component": "reference", "name": "Background Image", "label": "Background Image" }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      { "component": "reference", "name": "Image", "label": "Card Image" },
+      { "component": "text", "name": "Title", "label": "Card Title" },
+      { "component": "richtext", "name": "Description", "label": "Card Description" },
+      { "component": "text", "name": "Link Text", "label": "Link Text" }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      { "component": "reference", "name": "Image", "label": "Image" },
+      { "component": "richtext", "name": "Content", "label": "Content" }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      { "component": "text", "name": "Question", "label": "Question" },
+      { "component": "richtext", "name": "Answer", "label": "Answer" }
+    ]
+  },
+  {
+    "id": "app-download",
+    "fields": [
+      { "component": "text", "name": "Heading", "label": "Heading" },
+      { "component": "text", "name": "CTA Label", "label": "CTA Button Text" },
+      { "component": "reference", "name": "QR Image", "label": "QR Code Image" },
+      { "component": "richtext", "name": "Terms", "label": "Terms Text" }
+    ]
+  },
+  {
+    "id": "container-component",
+    "fields": [
+      { "component": "richtext", "name": "Content", "label": "Content" }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      { "component": "text", "name": "Title", "label": "Title" },
+      { "component": "richtext", "name": "Description", "label": "Description" },
+      { "component": "reference", "name": "Image", "label": "Image" },
+      { "component": "richtext", "name": "Actions", "label": "Action Links" }
+    ]
+  },
+  {
+    "id": "title",
+    "fields": [
+      { "component": "text", "name": "Text", "label": "Title Text" },
+      { "component": "text", "name": "Type", "label": "Heading Level (h1-h4)" }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      { "component": "text", "name": "style", "label": "Style" }
+    ]
+  }
+]
