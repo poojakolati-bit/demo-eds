@@ -1,0 +1,168 @@
+/* Container Component Block — BofA layout wrapper */
+
+/* --- Default / Centered variant --- */
+.container-component {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+.container-component__inner {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+}
+
+/* --- Cards (3-column grid) variant --- */
+.container-component.cards {
+  padding: 0;
+}
+
+.container-component__grid {
+  display: grid;
+  gap: var(--bofa-card-gap);
+  grid-template-columns: 1fr;
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+  align-items: stretch;
+}
+
+@media (width >= 768px) {
+  .container-component__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.container-component__grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Split (50/50 image + text) variant --- */
+.container-component.split {
+  max-width: 100%;
+  padding: 0;
+}
+
+.container-component__split-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x);
+}
+
+@media (width <= 768px) {
+  .container-component__split-row {
+    flex-direction: column;
+  }
+}
+
+.container-component__split-row--reverse {
+  flex-direction: row-reverse;
+}
+
+@media (width <= 768px) {
+  .container-component__split-row--reverse {
+    flex-direction: column;
+  }
+}
+
+.container-component__split-image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+@media (width <= 768px) {
+  .container-component__split-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.container-component__split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-component__split-content {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+
+@media (width <= 768px) {
+  .container-component__split-content {
+    padding: 1.5rem;
+  }
+}
+
+/* --- Centered variant --- */
+.container-component.centered {
+  text-align: center;
+}
+
+/* --- CTA Banner variant --- */
+.container-component.cta-banner {
+  max-width: 100%;
+  padding: 0;
+  background-color: var(--bofa-white);
+  text-align: center;
+  border-top: 6px solid var(--bofa-navy);
+}
+
+.container-component__cta-inner {
+  max-width: var(--bofa-container-max);
+  margin: 0 auto;
+  padding: 0 var(--bofa-section-padding-x) var(--bofa-section-padding-y);
+}
+
+.container-component.cta-banner h2,
+.container-component.cta-banner h3 {
+  color: var(--bofa-dark-text);
+  font-weight: 300;
+  font-size: var(--bofa-headline-md);
+  line-height: 1.2;
+  margin-top: 2.5rem;
+}
+
+@media (width >= 1068px) {
+  .container-component.cta-banner h2,
+  .container-component.cta-banner h3 {
+    font-size: var(--bofa-headline-lg);
+  }
+}
+
+.container-component.cta-banner a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  background-color: var(--bofa-red-bright);
+  color: var(--bofa-white);
+  border-radius: var(--bofa-btn-radius);
+  padding: 0.75rem 3rem;
+  font-size: 1.125rem;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  min-width: 280px;
+}
+
+.container-component.cta-banner a:hover {
+  background-color: var(--bofa-red);
+  color: var(--bofa-white);
+  text-decoration: none;
+}
+
+.container-component.cta-banner p {
+  margin-top: 1.25rem;
+  font-size: var(--bofa-body-sm);
+  color: var(--bofa-dark-text);
+}
+
+.container-component.cta-banner em {
+  font-style: italic;
+}

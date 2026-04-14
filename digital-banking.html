@@ -57,6 +57,42 @@
       ]
     },
     {
+      "id": "container-component",
+      "fields": [
+        { "component": "select", "name": "variant", "label": "Layout Variant", "valueType": "string",
+          "options": [
+            { "name": "Default", "value": "" },
+            { "name": "Cards Grid", "value": "cards" },
+            { "name": "Split Layout", "value": "split" },
+            { "name": "Centered", "value": "centered" },
+            { "name": "CTA Banner", "value": "cta-banner" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaser",
+      "fields": [
+        { "component": "text", "name": "jcr:title", "label": "Title", "valueType": "string" },
+        { "component": "richtext", "name": "jcr:description", "label": "Description", "valueType": "string" },
+        { "component": "text", "name": "fileReference", "label": "Image Path", "valueType": "string" }
+      ]
+    },
+    {
+      "id": "title",
+      "fields": [
+        { "component": "text", "name": "jcr:title", "label": "Title Text", "valueType": "string" },
+        { "component": "select", "name": "type", "label": "Heading Level", "valueType": "string",
+          "options": [
+            { "name": "H1", "value": "h1" },
+            { "name": "H2", "value": "h2" },
+            { "name": "H3", "value": "h3" },
+            { "name": "H4", "value": "h4" }
+          ]
+        }
+      ]
+    },
+    {
       "id": "site-header",
       "fields": [
         { "component": "text", "name": "logoImage", "label": "Logo Image Path", "valueType": "string" },
@@ -88,6 +124,9 @@
         { "title": "Feature Cards", "id": "feature-card", "plugins": { "aem": { "page": { "resourceType": "demo/components/cards", "template": {} } } } },
         { "title": "Columns", "id": "columns-item", "plugins": { "aem": { "page": { "resourceType": "demo/components/columns", "template": {} } } } },
         { "title": "Accordion", "id": "accordion-item", "plugins": { "aem": { "page": { "resourceType": "demo/components/accordion", "template": {} } } } },
+        { "title": "Container", "id": "container-component", "plugins": { "aem": { "page": { "resourceType": "demo/components/container", "template": {} } } } },
+        { "title": "Teaser", "id": "teaser", "plugins": { "aem": { "page": { "resourceType": "demo/components/teaser", "template": {} } } } },
+        { "title": "Title", "id": "title", "plugins": { "aem": { "page": { "resourceType": "demo/components/title", "template": {} } } } },
         { "title": "App Download", "id": "app-download", "plugins": { "aem": { "page": { "resourceType": "demo/components/app-download", "template": {} } } } }
       ]
     }
