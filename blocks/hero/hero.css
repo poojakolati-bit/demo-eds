@@ -37,8 +37,8 @@
   z-index: 2;
   background: var(--bofa-white);
   border-radius: var(--bofa-card-radius);
-  padding: 2.5rem 3rem 2rem;
-  max-width: 80%;
+  padding: 3rem 3rem 2.5rem;
+  max-width: 70%;
   width: 100%;
   text-align: center;
   box-shadow: 0 2px 12px rgb(0 0 0 / 12%);

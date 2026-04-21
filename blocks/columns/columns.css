@@ -4,7 +4,7 @@
   width: 100%;
   max-width: var(--bofa-container-max);
   margin-inline: auto;
-  padding: 0 1rem;
+  padding: 0 3rem;
 }
 
 .columns__row {

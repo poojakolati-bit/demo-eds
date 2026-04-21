@@ -44,7 +44,7 @@
   /* Spacing */
   --bofa-section-padding-y: 3.75rem;
   --bofa-section-padding-x: 1.375rem;
-  --bofa-container-max: 71.25rem;
+  --bofa-container-max: 90rem;
   --bofa-card-gap: 1.375rem;
 
   /* Border & Shadow */
@@ -146,6 +146,11 @@ main .section + .section {
 /* Reduce padding on cards sections */
 main .section:has(.cards-wrapper) {
   padding: 2rem 0;
+}
+
+/* Reduce space between hero and cards */
+main .section:has(.hero-wrapper) + .section:has(.cards-wrapper) {
+  margin-top: 0;
 }
 
 /* Add spacing between cards and columns sections */

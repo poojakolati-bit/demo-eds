@@ -5,7 +5,7 @@
   grid-template-columns: 1fr;
   max-width: var(--bofa-container-max);
   margin: 0 auto;
-  padding: 0 var(--bofa-section-padding-x);
+  padding: 0 3rem;
   align-items: stretch;
 }
 
