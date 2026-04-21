@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DA.live Library Setup Helper</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { color: #012169; }
+    h2 { color: #c41230; margin-top: 2rem; }
+    .step { background: #f5f5f5; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+    .copy-section { border: 2px dashed #012169; padding: 1rem; margin: 1rem 0; background: #fff; }
+    .copy-btn { background: #c41230; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+    .copy-btn:hover { background: #94002b; }
+    table { border-collapse: collapse; width: 100%; }
+    td, th { border: 1px solid #ccc; padding: 8px; }
+    th { background: #012169; color: white; }
+  </style>
+</head>
+<body>
+  <h1>DA.live Library Setup</h1>
+  <p>Follow these steps to populate the Library in DA.live.</p>
+
+  <h2>Step 1: Create the Library spreadsheet</h2>
+  <div class="step">
+    <ol>
+      <li>Go to <a href="https://da.live/#/poojakolati-bit/demo-eds/tools/sidekick" target="_blank">DA.live /tools/sidekick/</a></li>
+      <li>Create a new <strong>sheet</strong> (not document) called <code>library</code></li>
+      <li>In the sheet, create a tab called <code>helix-blocks</code></li>
+      <li>Add columns: <code>name</code> and <code>path</code></li>
+      <li>Add this row: name = <code>Blocks</code>, path = <code>/tools/sidekick/blocks</code></li>
+      <li>Click <strong>Preview</strong> to publish</li>
+    </ol>
+  </div>
+
+  <h2>Step 2: Create the Blocks example document</h2>
+  <div class="step">
+    <ol>
+      <li>Go to <a href="https://da.live/#/poojakolati-bit/demo-eds/tools/sidekick" target="_blank">DA.live /tools/sidekick/</a></li>
+      <li>Create a new <strong>document</strong> called <code>blocks</code></li>
+      <li>Select the content below (Cmd+A inside the box), Copy (Cmd+C)</li>
+      <li>Paste (Cmd+V) into the blocks document</li>
+      <li>Click <strong>Preview</strong> to publish</li>
+    </ol>
+  </div>
+
+  <h2>Copy this content into the "blocks" document:</h2>
+  <div class="copy-section" id="blocks-content">
+    <!-- Hero block -->
+    <table><tr><th colspan="2">Hero</th></tr>
+    <tr><td>Heading</td><td>Mobile and Online Banking</td></tr>
+    <tr><td>Subtitle</td><td>Secure access to your accounts to help you stay in control of your financial life, 24/7.</td></tr>
+    <tr><td>CTA Label</td><td>Get Started</td></tr>
+    <tr><td>Prefix Text</td><td>Mobile and Online Banking</td></tr>
+    <tr><td>Background Image</td><td><img src="https://main--demo-eds--poojakolati-bit.aem.page/media/hero-bg.jpg" alt="Hero background"></td></tr>
+    </table>
+
+    <hr>
+
+    <!-- Cards block -->
+    <table><tr><th colspan="4">Cards</th></tr>
+    <tr><td><img src="https://main--demo-eds--poojakolati-bit.aem.page/media/mobile_150x100.jpg" alt="Mobile Banking"></td><td>Mobile Banking</td><td>Manage and monitor your accounts from almost anywhere.</td><td>Learn more</td></tr>
+    </table>
+
+    <hr>
+
+    <!-- Columns block -->
+    <table><tr><th colspan="2">Columns</th></tr>
+    <tr><td><img src="https://main--demo-eds--poojakolati-bit.aem.page/media/erica-card-bg.gif" alt="Ask Erica"></td><td><h2>Ask Erica. Get answers.</h2><p>Erica, your virtual financial assistant, is here to help.</p></td></tr>
+    </table>
+
+    <hr>
+
+    <!-- Accordion block -->
+    <table><tr><th colspan="2">Accordion</th></tr>
+    <tr><td>What is Digital Banking?</td><td>Digital Banking gives you secure access to your accounts through our website and mobile app.</td></tr>
+    </table>
+
+    <hr>
+
+    <!-- App Download block -->
+    <table><tr><th colspan="2">App Download</th></tr>
+    <tr><td>Heading</td><td>Bank simply and conveniently on your own schedule</td></tr>
+    <tr><td>CTA Label</td><td>Get the app</td></tr>
+    <tr><td>QR Image</td><td><img src="https://main--demo-eds--poojakolati-bit.aem.page/media/qrc-widget.jpg" alt="QR Code"></td></tr>
+    <tr><td>Terms</td><td><em>Standard message and data rates may apply.</em></td></tr>
+    </table>
+  </div>
+
+  <h2>Step 3: Preview both documents</h2>
+  <div class="step">
+    <ol>
+      <li>Open the <code>library</code> sheet and click <strong>Preview</strong></li>
+      <li>Open the <code>blocks</code> document and click <strong>Preview</strong></li>
+    </ol>
+  </div>
+
+  <h2>Step 4: Verify</h2>
+  <div class="step">
+    <p>Open your digital-banking page in DA.live and click <strong>Library</strong> — your blocks should appear.</p>
+  </div>
+</body>
+</html>
