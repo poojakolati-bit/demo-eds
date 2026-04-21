@@ -1,9 +1,6 @@
 /* Columns Block — BofA 50/50 teaser sections */
 .columns {
   margin-bottom: 2rem;
-  padding: 0 var(--bofa-section-padding-x);
-  max-width: var(--bofa-container-max);
-  margin-inline: auto;
 }
 
 .columns__row {
@@ -11,13 +8,11 @@
   align-items: stretch;
   gap: 0;
   width: 100%;
-  margin: 0 0 2rem;
+  margin: 0 0 0;
   padding: 0;
   min-height: 420px;
-  border: 1px solid var(--bofa-border-gray);
   border-radius: var(--bofa-card-radius);
   overflow: hidden;
-  box-shadow: var(--bofa-card-shadow);
 }
 
 @media (width <= 768px) {
