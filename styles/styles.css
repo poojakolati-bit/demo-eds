@@ -136,7 +136,26 @@ main {
 }
 
 main .section {
-  padding: 0;
+  padding: var(--bofa-section-padding-y) 0;
+}
+
+main .section + .section {
+  margin-top: 1rem;
+}
+
+/* Reduce padding on cards sections */
+main .section:has(.cards-wrapper) {
+  padding: 2rem 0;
+}
+
+/* Add spacing between cards and columns sections */
+main .section:has(.cards-wrapper) + .section:has(.columns-wrapper) {
+  margin-top: 0.5rem;
+}
+
+/* Center-align resource center section heading and text */
+main .section:has(.cards.resource-center) .default-content-wrapper {
+  text-align: center;
 }
 
 /* --- Default Content (title, text, button as plain HTML) --- */
