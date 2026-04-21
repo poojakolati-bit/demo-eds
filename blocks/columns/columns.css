@@ -1,6 +1,8 @@
 /* Columns Block — BofA 50/50 teaser sections */
 .columns {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .columns__row {

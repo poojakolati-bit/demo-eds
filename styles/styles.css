@@ -153,6 +153,17 @@ main .section:has(.cards-wrapper) + .section:has(.columns-wrapper) {
   margin-top: 0.5rem;
 }
 
+/* Columns section should stretch full width */
+main .section:has(.columns-wrapper) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+main .section:has(.columns-wrapper) .columns-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
 /* Center-align resource center section heading and text */
 main .section:has(.cards.resource-center) .default-content-wrapper {
   text-align: center;
