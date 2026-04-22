@@ -3,14 +3,18 @@
   ":version": 3,
   ":type": "multi-sheet",
   "helix-blocks": {
-    "total": 1,
+    "total": 8,
     "offset": 0,
-    "limit": 1,
+    "limit": 8,
     "data": [
-      {
-        "name": "Blocks",
-        "path": "/tools/sidekick/blocks"
-      }
+      { "name": "Hero", "path": "/tools/sidekick/blocks/hero" },
+      { "name": "Cards", "path": "/tools/sidekick/blocks/cards" },
+      { "name": "Columns", "path": "/tools/sidekick/blocks/columns" },
+      { "name": "Accordion", "path": "/tools/sidekick/blocks/accordion" },
+      { "name": "App Download", "path": "/tools/sidekick/blocks/app-download" },
+      { "name": "Container", "path": "/tools/sidekick/blocks/container-component" },
+      { "name": "Teaser", "path": "/tools/sidekick/blocks/teaser" },
+      { "name": "Title", "path": "/tools/sidekick/blocks/title" }
     ],
     "columns": ["name", "path"]
   }
